@@ -5,3 +5,8 @@
 2.集成[EasyObserver、EasyEventHub](https://github.com/NingOpenSource/EasyObserver)库实现简单的观察者模式
 
 3.实现了一个分页的工具类PagingUtils
+
+## 下载地址
+
+[![](https://jitpack.io/v/NingOpenSource/EasyAndroid.svg)](https://jitpack.io/#NingOpenSource/EasyAndroid)
+

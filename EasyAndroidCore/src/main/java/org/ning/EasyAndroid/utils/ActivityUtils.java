@@ -6,6 +6,8 @@ import android.content.Context;
 import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 
+import org.ning.EasyJava.utils.StringUtils;
+
 import java.util.List;
 
 /**

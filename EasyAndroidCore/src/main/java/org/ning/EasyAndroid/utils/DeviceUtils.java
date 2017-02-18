@@ -6,6 +6,8 @@ import android.net.wifi.WifiManager;
 import android.support.annotation.NonNull;
 import android.telephony.TelephonyManager;
 
+import org.ning.EasyJava.utils.StringUtils;
+
 /**
  * 设备信息
  * 

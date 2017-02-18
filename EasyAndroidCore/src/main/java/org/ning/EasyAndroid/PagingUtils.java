@@ -3,7 +3,7 @@ package org.ning.EasyAndroid;
 import android.content.Context;
 import android.support.annotation.UiThread;
 
-import org.ning.EasyAndroid.utils.StringUtils;
+import org.ning.EasyJava.utils.StringUtils;
 import org.ning.EasyObserver.core.EasyAcceptor;
 
 import java.util.ArrayList;
@@ -13,7 +13,6 @@ import java.util.List;
  * <P>分页工具</P>
  * Created by yanni on 2017/1/19.
  */
-
 public class PagingUtils {
     /**
      * 是否还有更多

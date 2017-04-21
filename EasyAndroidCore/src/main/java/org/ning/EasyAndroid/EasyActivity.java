@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -159,7 +160,7 @@ public abstract class EasyActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        for (String key : stringBeforeCreateListenerHashMap.keySet()) {
+        for (String key : new ArrayList<>(stringBeforeCreateListenerHashMap.keySet())) {
             stringBeforeCreateListenerHashMap.get(key).onCreate(this, savedInstanceState);
         }
         super.onCreate(savedInstanceState, persistentState);
@@ -168,7 +169,7 @@ public abstract class EasyActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        for (String key : stringOnPauseListenerHashMap.keySet()) {
+        for (String key : new ArrayList<>(stringOnPauseListenerHashMap.keySet())) {
             stringOnPauseListenerHashMap.get(key).onPause(this);
         }
     }
@@ -177,7 +178,7 @@ public abstract class EasyActivity extends AppCompatActivity {
 
     @Override
     public void finish() {
-        for (String key : stringOnFinishListenerMap.keySet()) {
+        for (String key : new ArrayList<>(stringOnFinishListenerMap.keySet())) {
             stringOnFinishListenerMap.get(key).finish(this);
         }
         super.finish();
@@ -188,7 +189,7 @@ public abstract class EasyActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
         super.onActivityResult(requestCode, resultCode, data);
-        for (String key : stringOnActivityResultListenerHashMap.keySet()) {
+        for (String key : new ArrayList<>(stringOnActivityResultListenerHashMap.keySet())) {
             stringOnActivityResultListenerHashMap.get(key).onActivityResult(this, requestCode, resultCode, data);
         }
     }
@@ -199,7 +200,7 @@ public abstract class EasyActivity extends AppCompatActivity {
     protected void onNewIntent(Intent intent) {
         // TODO Auto-generated method stub
         super.onNewIntent(intent);
-        for (String key : stringOnNewIntentListenerHashMap.keySet()) {
+        for (String key : new ArrayList<>(stringOnNewIntentListenerHashMap.keySet())) {
             stringOnNewIntentListenerHashMap.get(key).onNewIntent(this, intent);
         }
     }
@@ -208,7 +209,7 @@ public abstract class EasyActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        for (String key : stringOnStartListenerHashMap.keySet()) {
+        for (String key : new ArrayList<>(stringOnStartListenerHashMap.keySet())) {
             stringOnStartListenerHashMap.get(key).onStart(this);
         }
     }
@@ -216,7 +217,7 @@ public abstract class EasyActivity extends AppCompatActivity {
     protected void onResume() {
         // TODO Auto-generated method stub
         super.onResume();
-        for (String key : stringOnResumeListenerHashMap.keySet()) {
+        for (String key : new ArrayList<>(stringOnResumeListenerHashMap.keySet())) {
             stringOnResumeListenerHashMap.get(key).onResume(this);
         }
     }
@@ -225,7 +226,7 @@ public abstract class EasyActivity extends AppCompatActivity {
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        for (String key : stringOnAttachedToWindowListenerHashMap.keySet()) {
+        for (String key : new ArrayList<>(stringOnAttachedToWindowListenerHashMap.keySet())) {
             stringOnAttachedToWindowListenerHashMap.get(key).onAttachedToWindow(this);
         }
     }
